@@ -2,13 +2,16 @@ from django.db import models
 
 # Create your models here.
 
-class Persona:
+class Curso(models.Model):
+    nombre = models.CharField(max_length=40)
+    camada = models.IntegerField()
+
+class Estudiandte(models.Model):
     nombre = models.CharField(max_length=30)
-    apellido = models.CharField(max_length=20)
-    correo = models.EmailField()
+    apellido = models.CharField(max_length=30)
+    email = models.EmailField()
 
-#Genero un modelo que herede lo mismo
-
-class Persona2(models.Model, Persona):
-    pass
-
+class Profesor(models.Model):
+    nombre = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
+    email = models.EmailField()
