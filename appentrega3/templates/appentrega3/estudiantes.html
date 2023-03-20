@@ -3,6 +3,10 @@
 
 {% load static %}
 
+{% block title %}
+.: Estudiantes :.
+{% endblock %}
+
 {% block cambio_contenido %}
 
         <!-- Masthead-->
@@ -12,7 +16,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Bienvenido! a la Tercera Pre-Entrega Oñate Lucas</h1>
+                            <h1 class="mb-5">ESTUDIANTES</h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -22,7 +26,6 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                
                                 <!-- Submit success message-->
                                 <!---->
                                 <!-- This is what your users will see when the form-->
@@ -46,5 +49,18 @@
             </div>
         </header>
 
+        <br>
+        <h1> Pagina Carga Estudiantes </h1>
+        <br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <p> Nombre: <input type = "text" name="nombre">
+                <p> Apellido: <input type = "text" name="apellido">
+                <p> Email: <input type = "text" name="email">
+                <input type = "submit" value="Enviar">
+            </form>   
         
+        
+        
+
 {% endblock %}
